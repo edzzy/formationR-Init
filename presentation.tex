@@ -220,8 +220,102 @@
 \end{frame}
 
 \subsection{Objectif du TP}
-\begin{itemize}
-	\item Assimiler le vocabulaire 
+\begin{frame}
+	\setbeamercovered{dynamic}
+	\frametitle{Objectif du TP}
+	\begin{center}
 		
-\end{itemize}<++>
+	\begin{itemize}
+		\item {Assimiler le vocabulaire }
+		\item {Se servir de R comme d'une calculatrice}
+		\item {Écrire et modifier des lignes de commande}
+		\item {Utiliser un script déjà écrit}
+		\item {Savoir où trouver de l'aide (documentation)}
+		\item {Utiliser un éditeur convivial (RStudio)}%
+	\end{itemize}
+	\end{center}
+\end{frame}
+
+\subsection{Comparaison Excel R}
+\begin{frame}
+	\setbeamercovered{dynamic}
+	\frametitle{Comparaison Excel R}
+	\begin{center}
+	\begin{tabular}[h]{|c|c|}
+		\hline
+		Excel & R \\
+		\hline
+		Cellule & une valeur (Variable) \\
+		\hline
+		Plage de données & data.frame matrix, list, vector \\
+		\hline
+		Valeur & Valeur (value) \\
+		\hline
+		Format & Type \\
+		\hline
+		Fonction & Fonction \\
+		\hline
+		Macro & Script \\
+		\hline
+	\end{tabular}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\setbeamercovered{dynamic}
+	\frametitle{Généralité sur les variables}
+	\begin{itemize}
+		\item Un nom
+		\item Valeur(s)
+		\item Les valeurs ont un type : 
+			\begin{itemize}
+				\item numérique : 1,2, 3.14
+				\item chaine de caratères : A,B genes
+				\item logique : TRUE/FALSE
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\setbeamercovered{dynamic}
+	\frametitle{Cathégories de variables}
+	\begin{center}
+		\begin{itemize}
+			\item vector -> vecteur (type homogène)
+			\item matrix -> matrice (type homogène)
+			\item data.frame -> tableau de données (type hétèrogène)
+			\item factor -> classe de paramètres (type homogène)
+			\item list -> liste( type hétèrogène)
+		\end{itemize}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\setbeamercovered{dynamic}
+	\frametitle{Les Fonctions}
+	\begin{center}
+		\begin{itemize}
+			\item Créent, modifient et informent sur les données
+			\item Contiennent des arguments et des instructions
+		\end{itemize}
+	\end{center}
+\end{frame}
+\begin{frame}
+	\setbeamercovered{dynamic}
+	\frametitle{Règles de nomenclatures}
+	\begin{itemize}
+		\item Importance de la casse (majuscule/minuscule)
+			\begin{itemize}
+				\item : pizza  $\neq$ Pizza
+			\end{itemize}
+		\item Informatique anglo-saxone
+			\begin{itemize}
+				\item Ne pas nommer les noms des objets avec des acents
+				\item Le point sert de décimal, la virgule non !
+			\end{itemize}
+		\item Ne JAMAIS mettre d'espace dans un nom
+		\item Ne JAMAIS commencer un nom par un chiffre
+		\item Eviter d'utiliser des symboles (+ - / \dots)
+	\end{itemize}
+\end{frame}
 \end{document}
