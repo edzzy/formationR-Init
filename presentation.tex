@@ -17,114 +17,89 @@
 \usepackage{tikz}
 
 
-%\setbeamertemplate{caption}[numbered]
-%\setbeamertemplate{navigation symbols}{
-%		\insertsectionnavigationsymbol
-%}
 \setbeamertemplate{blocks}[rounded]%
 [shadow=true]
 
-%\addtobeamertemplate{footline}{\hfill\insertframenumber/\inserttotalframenumber\hspace{2em}\null}
 
 %Definition de couleur en RGB
 %\definecolor{LightRed}{RGB}{255,204,204}
 %\definecolor{LightGreen}{RGB}{153,255,153}
 
-%Sommaire automatique
-%\AtBeginSection[]{
-%		\begin{frame}{Sommaire}
-%		\small \tableofcontents[currentsection, hideothersubsections]
-%		\end{frame}
-%	}
-%
-%----------Début du document
 \begin{document}
 
-%---Slide 1 page de titre
 \begin{frame}
 	\titlepage
 \end{frame}
+	
 
-
-%-------- Slide du sommaire
 \section*{Sommaire}
 \begin{frame}{Sommaire}
-		%\tiny \tableofcontents[hideothersubsections]
-		\small \tableofcontents
+	%\tiny \tableofcontents[hideothersubsections]
+	\small \tableofcontents
 \end{frame}
-		
-%---Section 1
+
 \section{Notions informatiques}
-	\subsection{L'ordinateur}
-	\begin{frame}
-		\frametitle{L'ordinateur}
-		\begin{columns}
-			\begin{column}[c]{5cm}
-				\includegraphics[scale=0.2]{image/PC.jpg}
-			\end{column}
-			\begin{column}[c]{5cm}
-				\includegraphics[scale=0.15]{image/calculette.jpg}
-			\end{column}
-		\end{columns}
-	\end{frame}
+\subsection{L'ordinateur}
+\begin{frame}
+	\frametitle{L'ordinateur}
+	\begin{columns}
+		\begin{column}[c]{5cm}
+			\includegraphics[scale=0.2]{image/PC.jpg}
+		\end{column}
+		\begin{column}[c]{5cm}
+			\includegraphics[scale=0.15]{image/calculette.jpg}
+		\end{column}
+	\end{columns}
+\end{frame}
 
-	\subsection{Systéme d'exploitation}
-	\begin{frame}
-		\frametitle{Les systéme d'exploitation : OS (Operating System)}
-		\begin{figure}
-				\includegraphics[scale=0.55]{image/OSimage.png}
-			\end{figure}
-	\end{frame}
 
-	\subsection{Types de mémoires}
-	\begin{frame}
-		\frametitle{Les mémoires}
-		\begin{block}{Mémoire permanante}
-			\begin{itemize}
-				\item Mémoire de stockage des fichiers.
-				\item Données, vidéos, musique, photos\dots
-				\item Grand capacité mais relativement lente
-				\item Ordre de grandeur : PC domestique 2 TO.
-			\end{itemize}
-		\end{block}
+\subsection{Systéme d'exploitation}
+\begin{frame}
+	\frametitle{Les systéme d'exploitation : OS (Operating System)}
+	\begin{figure}
+		\includegraphics[scale=0.55]{image/OSimage.png}
+	\end{figure}
+\end{frame}
 
-		\begin{block}{Mémoire temporaire}
-			\begin{itemize}
-				\item Mémoire de calcul : mémoire vive, RAM (mémoire vidéo).
-				\item Traitement pour le calcule, rendu image.
-				\item Petite capacité mais rapide;
-				\item Ordre de grandeur : PC domestique entre 4 et 8 Go RAM .
-			\end{itemize}
-		\end{block}
+\subsection{Les applications}
+\begin{frame}
+	\setbeamercovered{dynamic}
+	\frametitle{Les applications : logiciels, programmes, }
+	\begin{figure}[h]
+		\begin{center}
+		  \includegraphics[scale=0.45]{image/software.png}
+		\end{center}
+	\end{figure}
+\end{frame}
 
-	\end{frame}
 
-	\subsection{Chemins et fichiers}
-	\begin{frame}
-		\frametitle{Arborescence}
-		\begin{block}{Appélation}
-			\begin{itemize}
-				\item Fichiers données numeriques de type variés
-				\item Directory = Répertoire = Dossier : contient des fichiers.
-			\end{itemize}
-		\end{block}
-		\begin{columns}
-			\begin{column}[c]{5cm}
-				\includegraphics[scale=0.25]{image/ArboUbuntu.png}
-			\end{column}
+\subsection{Chemins et fichiers}
+\begin{frame}
+	\frametitle{Arborescence}
+	\begin{block}{Appélation}
+		\begin{itemize}
+			\item Fichiers données numeriques de type variés
+			\item Directory = Répertoire = Dossier : contient des fichiers.
+		\end{itemize}
+	\end{block}
+	\begin{columns}
+		\begin{column}[c]{5cm}
+			\includegraphics[scale=0.25]{image/ArboUbuntu.png}
+		\end{column}
 			\begin{column}[c]{5cm}
 				\includegraphics[scale=0.25]{image/ArboWin.png}
 			\end{column}
 		\end{columns}
-	\end{frame}
-	\begin{frame}
+\end{frame}
+
+\begin{frame}
 		\frametitle{Shematisation}
 		\begin{center}
 			\input{treefiles}
 		\end{center}
-	\end{frame}	
+\end{frame}	
 
-	\begin{frame}
+\begin{frame}
 		\frametitle{La navigation}
 		\begin{block}{Deux types de navigation}
 			\begin{itemize}
@@ -140,9 +115,9 @@
 				\item Le Répertoire parent : .. (deux points)
 			\end{itemize}
 		\end{block}
-	\end{frame}
+\end{frame}
 
-	\begin{frame}
+\begin{frame}
 		\frametitle{Formalisation : Chemin absolu}
 		\begin{columns}
 			\begin{column}[l]{5cm}
@@ -157,8 +132,9 @@
 				\end{block}
 			\end{column}
 		\end{columns}
-	\end{frame}
-	\begin{frame}
+\end{frame}
+
+\begin{frame}
 		\frametitle{Formalisation : Chemin relatif exemple 1}
 		\begin{columns}
 			\begin{column}[l]{5cm}
@@ -172,8 +148,9 @@
 				\end{block}
 			\end{column}
 		\end{columns}
-	\end{frame}
-	\begin{frame}
+\end{frame}
+
+\begin{frame}
 		\frametitle{Formalisation : Chemin relatif exemple 2}
 		\begin{columns}
 			\begin{column}[l]{5cm}
@@ -187,11 +164,48 @@
 				\end{block}
 			\end{column}
 		\end{columns}
-	\end{frame}
-\section{R}
-\section{Apperçu}
+\end{frame}
+
+\subsection{Types de mémoires}
 \begin{frame}
-	\frametitle{Apperçu}
+		\frametitle{Les mémoires}
+		\begin{columns}
+		  \begin{column}[c]{5cm}
+		    \begin{figure}[h]
+		      \begin{center}
+			\includegraphics[scale=0.35]{image/hdd.jpg}
+		      \end{center}
+		    \end{figure}
+		  \end{column}
+		  \begin{column}[c]{5cm}
+		    \begin{figure}[h]
+		      \begin{center}
+			\includegraphics[scale=0.40]{image/memory_chip.jpg}
+		      \end{center}
+		    \end{figure}
+		  \end{column}
+		\end{columns}
+\end{frame}
+
+ \subsection{Synthèse}
+\begin{frame}
+	  \setbeamercovered{dynamic}
+	  \frametitle{Synthèse}
+	  \begin{figure}[h]
+	    \begin{center}
+	      \includegraphics[scale=0.25]{image/OS.png}
+	    \end{center}
+	  \end{figure}
+\end{frame}
+
+
+
+
+\section{R}
+\subsection{Apperçu}
+
+\begin{frame}
+	\frametitle{R : Apperçu}
 	\begin{center}
 		\begin{block}{}
 			\begin{itemize}
@@ -204,37 +218,10 @@
 		\end{block}
 	\end{center}
 \end{frame}
-\section{Utilisation de RStudio}
-\section{Les variables principales}
-	\subsection{Généralité}
-		\subsubsection{Catégories}
-		\subsubsection{Les Fonctions}
-		\subsubsection{Nomenclatures et syntaxe}
-\section{Autour des varialbes}
-	\subsection{Variable simple}
-	\subsection{Vecteur}
-	\subsection{Matrices}
-	\subsection{data frame}
-\section{Les fonctions}
-	\subsection{fonctionnement}
-	\subsection{les arguments}
-\section{Paquet}
-\section{script}
 
-
-
-%\frame{
-%\begin{center}
-%	\frametitle{Étymologie}
-%	\begin{tikzpicture}
-%		\node[color=white] at (3,-3) {Kputw : \emph{cacher}};
-%		\node[color=white] at (-3,-3) {Anpo : \emph{loin}};
-%		\node (M) at (0,0) {\textcolor{red}{Anpo} - \textcolor{blue}{cryphe}};
-%		\node<2-> (A) at (-3,-3){\textcolor{red}{Anpo} : \emph{loin}};
-%		\node<3-> (K) at (3,-3){\textcolor{blue}{Kputw} : \emph{loin}};
-%		\draw<2->[->, color=red] (M.south west) -- (A);
-%		\draw<3->[->, color=blue] (M.south east) -- (K);
-%	\end{tikzpicture}
-%\end{center}
-%}
+\subsection{Objectif du TP}
+\begin{itemize}
+	\item Assimiler le vocabulaire 
+		
+\end{itemize}<++>
 \end{document}
