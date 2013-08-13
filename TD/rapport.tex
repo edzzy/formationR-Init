@@ -1,0 +1,227 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{lmodern}
+\usepackage{textcomp}
+\usepackage{underscore}
+\usepackage{longtable}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{changepage}
+
+
+\renewcommand{\labelitemi}{$\bullet$}
+\renewcommand{\labelitemii}{$\bullet$}
+
+\title{\input{title}}
+\author{\input{author}}
+
+\lhead{}
+%\lfoot{\emph{Rapport d'analyse P118}}
+\begin{document}
+\makeatletter
+  \begin{titlepage}
+	    \centering
+%		      {\large \textsc{Plateforme BiRD}}
+			\hfill
+			  \includegraphics[width=0.2\textwidth]{logo1.jpeg}\\
+			  \vspace{3em}
+			  % \includegraphics[width=0.35\textwidth]{logo2.jpeg}\\
+			   \includegraphics[width=1\textwidth]{bandeau.jpeg}\\
+			  \vspace{1cm}
+			    {\large\textbf{Rapport d'analyse}}\\
+			  \vspace{1em}
+%			   \vfill
+			 {\LARGE \textbf{\@title}} \\
+			     \vspace{2em}
+			{\large \@author} 
+			   \vfill
+			   {\large\textbf{	\@date}}\\
+	\end{titlepage}
+\makeatother
+%\maketitle
+\tableofcontents
+\newpage
+\pagestyle{fancy}
+\section{Questions posées}
+\input{resume.tex}
+\section{Description de l'analyse}
+L'analyse comporte deux volets :
+\begin{enumerate}
+	\item Le premier est de fournir des données nettoyées et analysables. 
+	\\ Cette partie comporte : 
+	\begin{itemize}
+		\item le contrôle qualité des échantillons, 
+		\item la normalisation, 
+		\item le filtrage des données 
+		\item la visualisation des données par clustering hiérarchique. 
+	\end{itemize}
+	\item Le second est un guide pour l'interprétation biologique grâce à deux méthodes d'analyses :
+	\begin{itemize}
+		\item une analyse globale : recherche de clusters. 
+		\item une analyse par gènes : analyse différentielle.
+	\end{itemize}
+		Dans les deux cas : annotation fonctionnelle basée sur Gene Ontology.
+\end{enumerate}
+
+ Les résultats de ces analyses sont sous la forme de listes de gènes associées à des fichiers d'annotations fonctionnelles. 
+\\
+L'ensemble de la démarche est décrite \bsc{Figure : }\ref{pipeline}.
+\input{pipeline}
+
+
+\section{Importation des données}
+
+\input{importData}
+
+%\subsection{Matrice obtenue}
+%Exemple matrice d'expression brute.(graph)
+%\input{graphImport}
+
+
+\section{Normalisation}
+\input{normalisation}
+
+\section{Contrôle qualité des échantillons}
+\subsection{Distribution du signal : boxplot}
+\begin{itemize}
+\item Elles sont réalisées avant et après la normalisation
+\item Pour les puces hybridées avec deux fluorochromes, on s'attend à une différence d'intensité entre les deux avant normalisation.
+\item Après normalisation cet effet doit être corrigé.
+\end{itemize}
+
+
+\textbf{Résultats :} \bsc{Figure}~\ref{statDes}.
+\input{graphStatDesc}
+\subsection{Corrélation}
+On calcule la corrélation de Pearson de chacun des échantillons par rapport à un Profil médian.
+\par
+Le profil médian est calculé à partir de la matrice de données d'expression. 
+\par
+Pour chaque sonde on calcule son signal médian (la médiane)
+%\input{exempleProfilMedian}
+\par
+De manière générale la corrélation varie entre -1(anti corrélé) et 1 (corrélé).
+Si elle est égale à 0 il n'y a pas de corrélation.
+\par
+Nous considérons qu'une corrélation >= 0.8 est une bonne corrélation.
+\\
+\textbf{Résultats :} \bsc{Figure}~\ref{Correlation}.
+\input{graphCorrelation}
+
+\section{Filtrage}
+\subsection{Principe}
+
+Le filtrage va permettre d'éliminer les sondes qui ne sont pas informatives pour l'analyse, par exemple les sondes trop faiblement exprimées ou les sondes trop peu variables.
+\par
+Pour cela, différents critères sont utilisés. Les plus communs sont le bruit de fond et la variabilité (CV ou écart-type)
+\subsection{Paramétres utilisés dans l'analyse}
+
+\input{filtrage}
+
+\section{Analyse par Clustering}
+\subsection{Définition}
+Le clustering hiérarchique est une méthode de classification non suppervisée permettant de construire des groupes (clusters) d'objets similaires à partir d'un ensemble hétérogène d'objets.
+\par
+\vspace{1em}
+Le logiciel utilisé est cluster \cite{cluster} . Les paramétres utilisés pour le calcul sont : 
+\begin{itemize} 
+	\item la distance :\emph{``Uncentered correlation``} 
+	\item le regroupement \emph{``average-linkage``}
+\end{itemize}
+ 
+\subsection{But}
+\begin{itemize}
+\item Visualiser les données et determiner des problèmes dans la matrice d'expression.
+\item Visualiser la classification des échantillons.
+\item Visualiser les signatures (regroupement des gènes).
+\item Sélectionner les clusters d'expression différentielle.
+\end{itemize}
+La matrice est représentée par les sondes en lignes et les échantillons en colonne. Les valeurs par ligne sont centrées sur la médiane. Une couleur rouge montre une sur-expression de l'échantillon et une couleur verte une sous expression.
+%\subsection{Filtrage Clustering : signal median}
+%\input{filtrageClustering}
+\subsection{Clustering général}
+
+\input{generalCluster}
+\subsection{Démarche par clustering (groupe de gène)}
+A chaque question binaire : 
+\begin{itemize}
+	\item Un test de Student est effectué par sonde et une Pvalue lui est attribuée (voir section~\ref{sec:gendiff} pour plus de détail)
+\item L'image montre la heatmap resultant du clustering hiérarchique associée aux pvalues de la question posée. 
+\item Ces pvalues sont transformées en appliquant la formule -log10(pvalue) afin de mieux visualiser les données
+\item Des pics distinguent les clusters répondant à la question posée.
+\item Afin de lisser la courbe nous calculons une \emph{moyenne mobile}. La moyenne des -log10(pvalue) est faite par pas de 200.
+\end{itemize}
+%\input{graphExempleCluster}
+\subsection{Questions Binaires : détection des clusters }
+\input{graphCluster}
+%\input{clustBinaire}
+
+\subsection{Annotation Fonctionnelle des clusters}
+Le principe est d'associer des annotations fonctionnelles aux clusters, en utilisant la base de données Gene Ontology \cite{go}\\
+Pour ce faire nous utilisons le logiciel GOminer \cite{gominer} qui fournit pour chaque liste deux fichiers : 
+
+\par
+
+\IfFileExists{AnnotationCluster.tex}{\input{AnnotationCluster.tex}}
+
+\begin{itemize}
+	\item Un fichier \emph{*fdrse.txt} contenant les annotations GO associées à différentes informations
+	\item Un fichier \emph{*gce.txt} contenant l'association des annotations et des gènes du clusters.
+\end{itemize}
+\begin{itemize}
+\item En-tête du fichier \emph{*.fdrse.txt} :
+\begin{description}
+	\item[GoID : ] indentifiant de l'annotation dans la base GO 
+	\item[Total : ] nombre de fois que l'annotation est retrouvée sur la matrice filtrée
+	\item[Change : ] nombre de fois que l'annotation est retrouvée dans le cluster
+	\item[Enrichissement : ] calcul de l'enrichissement de l'annotation
+	\item[Pvalue : ] significativité de l'annotation
+	\item[Term : ] description de l'annotation
+\end{description}
+
+\end{itemize}
+
+
+\section{Analyse différentielle}
+\label{sec:gendiff}
+Pour chaque question binaire un test de student est effectué pour chacune des sondes. On teste si les moyennes des deux conditions sont significativement différentes.
+\\
+Multiplier les tests statistiques augmente la probabilité globale de se tromper (faux positifs). Pour limiter cet effet, nous effectuons une correction des pvalues par la méthode de Benjamini-Hochberg. Une sonde est considérée comme différentiellement exprimé entre 2 conditions si sa p-value est < 0.05.
+\\
+
+\subsection{Résultats}
+
+Le tableau ci-dessous représente le nombre de sondes significatives avec correction
+\par
+\input{genDiff.tex}
+
+%\input{genDiffRaw.tex}
+
+\par
+\subsection{Annotation fonctionnelle des gènes différentiels}
+\IfFileExists{annotGeneDiff.tex}{\input{annotGeneDiff.tex}}{Pas d'annotation fonctionnelles significatives}
+
+\section{Conclusion de l'analyse}
+\input{conclusion}
+\newpage
+\appendix
+\section{Annexes}
+\subsection{Outils complémentaire}
+\input{gorilla}
+
+\subsection{Info Session R}
+\input{info}
+\section{Bibliographie}
+\bibliography{bibl}{}
+\bibliographystyle{apalike}
+\newpage
+\section{Fichiers rendus}
+\input{files}
+\end{document}
+

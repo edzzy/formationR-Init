@@ -39,19 +39,6 @@
 \end{frame}
 
 \section{Notions informatiques}
-\subsection{L'ordinateur}
-\begin{frame}
-	\frametitle{L'ordinateur}
-	\begin{columns}
-		\begin{column}[c]{5cm}
-			\includegraphics[scale=0.2]{image/PC.jpg}
-		\end{column}
-		\begin{column}[c]{5cm}
-			\includegraphics[scale=0.15]{image/calculette.jpg}
-		\end{column}
-	\end{columns}
-\end{frame}
-
 
 \subsection{Systéme d'exploitation}
 \begin{frame}
@@ -93,7 +80,7 @@
 \end{frame}
 
 \begin{frame}
-		\frametitle{Shematisation}
+		\frametitle{Schématisation}
 		\begin{center}
 			\input{treefiles}
 		\end{center}
@@ -221,11 +208,10 @@
 
 \subsection{Objectif du TP}
 \begin{frame}
-	\setbeamercovered{dynamic}
 	\frametitle{Objectif du TP}
-	\begin{center}
+	\setbeamercovered{dynamic}
 		
-	\begin{itemize}
+	\begin{itemize}[<+->]
 		\item {Assimiler le vocabulaire }
 		\item {Se servir de R comme d'une calculatrice}
 		\item {Écrire et modifier des lignes de commande}
@@ -233,28 +219,35 @@
 		\item {Savoir où trouver de l'aide (documentation)}
 		\item {Utiliser un éditeur convivial (RStudio)}%
 	\end{itemize}
-	\end{center}
 \end{frame}
 
 \subsection{Comparaison Excel R}
 \begin{frame}
-	\setbeamercovered{dynamic}
 	\frametitle{Comparaison Excel R}
+	\setbeamercovered{dynamic}
 	\begin{center}
-	\begin{tabular}[h]{|c|c|}
+		\setlength\doublerulesep{3pt}
+		\doublerulesepcolor{blue!15}
+	\begin{tabular}[h]{|c||c|}
 		\hline
 		Excel & R \\
+		\hline \hline
+		\rowcolor{green!25}
+		Cellule & Variable (simple) \\
 		\hline
-		Cellule & une valeur (Variable) \\
-		\hline
+		\rowcolor{green!25}
 		Plage de données & data.frame matrix, list, vector \\
 		\hline
+		\rowcolor{green!15}
 		Valeur & Valeur (value) \\
 		\hline
+		\rowcolor{green!15}
 		Format & Type \\
 		\hline
+		\rowcolor{blue!25}
 		Fonction & Fonction \\
 		\hline
+		\rowcolor{red!25}
 		Macro & Script \\
 		\hline
 	\end{tabular}
@@ -262,8 +255,8 @@
 \end{frame}
 
 \begin{frame}
-	\setbeamercovered{dynamic}
 	\frametitle{Généralité sur les variables}
+	\setbeamercovered{dynamic}
 	\begin{itemize}
 		\item Un nom
 		\item Valeur(s)
@@ -277,22 +270,22 @@
 \end{frame}
 
 \begin{frame}
+	\frametitle{Catégories de variables}
 	\setbeamercovered{dynamic}
-	\frametitle{Cathégories de variables}
-	\begin{center}
-		\begin{itemize}
-			\item vector -> vecteur (type homogène)
-			\item matrix -> matrice (type homogène)
-			\item data.frame -> tableau de données (type hétèrogène)
-			\item factor -> classe de paramètres (type homogène)
-			\item list -> liste( type hétèrogène)
+%	\begin{center}
+		\begin{itemize}[<+->]
+			\item vector $\Rightarrow$ vecteur (type homogène)
+			\item matrix $\Rightarrow$ matrice (type homogène)
+			\item data.frame $\Rightarrow$ tableau de données (type hétèrogène)
+			\item factor $\Rightarrow$ classe de paramètres (type homogène)
+			\item list $\Rightarrow$ liste( type hétèrogène)
 		\end{itemize}
-	\end{center}
+%	\end{center}
 \end{frame}
 
 \begin{frame}
-	\setbeamercovered{dynamic}
 	\frametitle{Les Fonctions}
+	\setbeamercovered{dynamic}
 	\begin{center}
 		\begin{itemize}
 			\item Créent, modifient et informent sur les données
@@ -300,9 +293,10 @@
 		\end{itemize}
 	\end{center}
 \end{frame}
+
 \begin{frame}
-	\setbeamercovered{dynamic}
 	\frametitle{Règles de nomenclatures}
+	\setbeamercovered{dynamic}
 	\begin{itemize}
 		\item Importance de la casse (majuscule/minuscule)
 			\begin{itemize}
