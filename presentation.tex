@@ -146,7 +146,7 @@
 			\begin{column}[r]{5cm}
 				\begin{block}{Chemin relatif}
 					\begin{itemize}
-						\item ../D3/D5/D6/F1.txt
+						\item ../D5/D6/F1.txt
 					\end{itemize}
 				\end{block}
 			\end{column}
@@ -233,7 +233,7 @@
 		Excel & R \\
 		\hline \hline
 		\rowcolor{green!25}
-		Cellule & Variable (simple) \\
+		Cellule & Objet (simple) \\
 		\hline
 		\rowcolor{green!25}
 		Plage de données & data.frame matrix, list, vector \\
@@ -253,12 +253,21 @@
 	\end{tabular}
 	\end{center}
 \end{frame}
-
 \begin{frame}
-	\frametitle{Généralité sur les variables}
+	\setbeamercovered{dynamic}
+	\frametitle{Les Objets}
+	\begin{exampleblock}{Deux types d'objets à retenir}
+	\begin{itemize}
+		\item Les objets de données
+		\item Les fonctions
+	\end{itemize}
+	\end{exampleblock}
+\end{frame}
+\begin{frame}
+	\frametitle{Les Objets de données}
 	\setbeamercovered{dynamic}
 	\begin{itemize}
-		\item Un nom
+		\item Un nom : que l'on appelle  variable
 		\item Valeur(s)
 		\item Les valeurs ont un type : 
 			\begin{itemize}
@@ -267,17 +276,18 @@
 				\item logique : TRUE/FALSE
 			\end{itemize}
 	\end{itemize}
+	Les objets sont temporaires, ils sont stocker dans la mémoire vive de l'ordinateur. Il faudra donc les sauvegarder.
 \end{frame}
 
 \begin{frame}
-	\frametitle{Catégories de variables}
+	\frametitle{Catégories de données}
 	\setbeamercovered{dynamic}
 %	\begin{center}
 		\begin{itemize}[<+->]
 			\item vector $\Rightarrow$ vecteur (type homogène)
 			\item matrix $\Rightarrow$ matrice (type homogène)
 			\item data.frame $\Rightarrow$ tableau de données (type hétèrogène)
-			\item factor $\Rightarrow$ classe de paramètres (type homogène)
+			\item factor $\Rightarrow$ classe de paramètres qualitatifs (type homogène)
 			\item list $\Rightarrow$ liste( type hétèrogène)
 		\end{itemize}
 %	\end{center}
@@ -288,6 +298,10 @@
 	\setbeamercovered{dynamic}
 	\begin{center}
 		\begin{itemize}
+			\item On également un nom
+			\item Une description (leur rôle)
+			\item Des arguments, paramétres
+			\item Retourne un résultats
 			\item Créent, modifient et informent sur les données
 			\item Contiennent des arguments et des instructions
 		\end{itemize}
@@ -295,12 +309,82 @@
 \end{frame}
 
 \begin{frame}
+	\setbeamercovered{dynamic}
+	\frametitle{Utilisation d'une fonction}
+	Une fonction c'est une recette de cuisine : La recette du quatre quarts
+	\begin{exampleblock}{Le quatre quarts : ingredients}
+		\begin{itemize}
+			\item 4 oeufs
+			\item 200g de farine
+			\item 200g de beurre
+			\item 200g de sucre
+		\end{itemize}
+	\end{exampleblock}
+\end{frame}
+\begin{frame}
+	\setbeamercovered{dynamic}
+	\begin{exampleblock}{Le quatre quarts : une suite d'actions ordonées}
+		\begin{enumerate}
+		\item Préchauffez le four à 210C.
+		\item  Mélangez bien le sucre et le beurre fondu.
+		 \item Cassez les oeufs et réservez les blancs.
+		\item Ajoutez les jaunes d'oeufs dans la préparation à base de beurre un par un en mélangeant bien.
+		\item \dots
+		\end{enumerate}
+			
+	\end{exampleblock}
+\end{frame}
+\begin{frame}
+	\setbeamercovered{dynamic}
+	\begin{exampleblock}{Un résultat}
+		Le quatre quart prêt à manger
+	\end{exampleblock}
+\end{frame}
+\begin{frame}
+	\setbeamercovered{dynamic}
+	\begin{exampleblock}{En informatique : }
+		\begin{itemize}
+			\item Le nom de la fonction suit certaines régles : cuisinerUnQuatreQuarts
+			\item Les ingredients sont des arguments : nbOeufs, poidFarine, poidSucre, poidBeurre
+			\item Les actions sont des suites d'insctruction (ligne de commandes)
+			\item Le retour de la fonction est un objet que l'on peut stoker dans une variable : monQuatreQuarts.
+			\item monQuatreQuarts $<-$ cuisinerUnQuatreQuarts(nbOeuf = 4, poidFarine = 200, poidBeurre = 200, poidSucre = 200)
+		\end{itemize}
+	\end{exampleblock}
+	
+\end{frame}
+\begin{frame}
+	\setbeamercovered{dynamic}
+	\frametitle{Ce qu'il faut retenir sur les fonctions}
+	\begin{itemize}
+	\item Les reconnaitres
+	\item Identifier les arguments 
+	\item Modifier les arguments
+	\item Stocker le résultats dans une variable.
+	\item Lire la documentation de la fonction pour connaitre son utilisation
+	\item Il n'est pas essentiel de connaître son fonctionement dans le détail.  
+\end{itemize}
+\end{frame}
+\begin{frame}
+	\setbeamercovered{dynamic}
+	\frametitle{Utilisation des arguments}
+	
+	Généralité sur les arguments.
+	\begin{itemize}
+		\item L'ordre des arguments n'a pas d'importance si leur noms est écrits
+		\item  Les variables doivent être dans un ordre précis si les noms ne sont pas écrits
+		\item  Certains arguments ont une valeur par défaut, si on ne la change pas, aucun besoin de l'écrire.
+		\item  Les valeurs attribuée aux arguments peuvent être des variables.
+	\end{itemize}
+	\end{frame}
+
+\begin{frame}
 	\frametitle{Règles de nomenclatures}
 	\setbeamercovered{dynamic}
 	\begin{itemize}
 		\item Importance de la casse (majuscule/minuscule)
 			\begin{itemize}
-				\item : pizza  $\neq$ Pizza
+				\item : monQuatreQuarts  $\neq$ MonQuatreQuarts
 			\end{itemize}
 		\item Informatique anglo-saxone
 			\begin{itemize}
