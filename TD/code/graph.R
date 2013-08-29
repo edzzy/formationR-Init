@@ -1,0 +1,23 @@
+# Utilisation basique
+boxplot(maMatriceLog)
+# Avec quelques paramètres
+boxplot(maMatriceLog, col = "blue" , las = "2")
+
+# Sauvegarde dans un fichier image
+# Dans l'onglet Plots : Export-'Save Plot As Image'
+# File name :  boxPlot
+# La même chose avec la commande : 
+dev.print(jpeg, file = "boxPlot.jpeg")
+
+# La fonction plot permet de tracer une série de données contre une autre (x,y).
+# Par exemple on sélectionne la première colonne.
+ech1 = maMatrice[, 1]
+
+# En supposant que le profil median calculé précédemment se nomme profilMedian :
+# Graphique simple (l'argument log permet d'obtenir une échelle en log pour les axes mentionnés)
+plot(x = profilMedian, y = ech1, log = "xy")
+
+# Le même graphique avec des paramètres supplémentaires 
+plot(x = profilMedian, y = ech1, log = "xy" , pch = 19, col = "darkgreen", xlab = "Profil Median", ylab = "Echantillon 1", main = "Profil median VS Echantillon 1")
+
+

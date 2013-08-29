@@ -1,0 +1,54 @@
+
+#création d'un vecteur numérique
+> monVecteur1 <- c(20,45,78,12)	
+
+#Quelle est la longueur (nombre d'indice) de ce vecteur ? 
+
+#------------------------------------------
+
+
+#Accès à l'élément d'indice 1
+> monVecteur1[1]				
+#Accéder aux élément d'indice  3 , 4 puis 5.
+
+#Que se passe-t-il lorsque que l'on dépasse la longueur du vecteur ?
+
+#-----------------------------------------------
+
+#Accès aux éléments d'indice de 1 à 3
+> monVecteur1[1:3]			
+#opération sur le vecteur 
+> monVecteur1 + 5.5			
+
+#Quel est le comportement de l'addition d'un nombre sur un vecteur ?
+
+#------------------------------------------------
+
+#addition de deux vecteurs de même taille
+> monVecteur2 <- c(10, 100, 5,2)
+> monVecteur1 + monVecteur2		
+
+#Quel est le comportement de l'addition de deux vecteurs entre eux ?
+
+-----------------------------------------------
+
+# Addition de deux vecteurs de taille différente :
+> monVecteur3 <- c(1, 2, 3) 
+> monVecteur1 + monVecteur3
+       
+> monVecteur4 <- c(50.2, 45.5)
+> monVecteur4 + monVecteur1
+
+# Quelle est le comportement de l'opération?
+
+# --------------------------------------------------
+
+#Création d'un vecteur avec chaine de caractère.
+> monVecteurA <- c("A", "B", "C")
+> monVecteurB <- c(A, B, C)
+
+#Pour quelle raison  monVecteurB n'a pas pu être créer ?
+
+# ---------------------------------------------------
+
+

@@ -1,0 +1,56 @@
+# Importation de données
+> maMatrice0 <- read.delim("Rmatrice.txt")
+
+# Obtenir de l'information
+	# Voir les premiéres lignes de la matrices
+> head(maMatrice0) 
+# Dimensions de la matrice (lignes, colones)
+> dim(maMatrice0) 
+# Nombre de lignes
+> nrow(maMatrice0)
+
+#Quelle est le nombre de lignes et de colonnes de la matrice ? 
+
+#-----------------------------------------------
+
+#Trouver une façon d'obtenir le nombre de lignes et une fonction équivalente à nrow pour le nombre de colonnes.
+
+> maMatrice <- read.delim("Rmatrice.txt", row.names = 1)
+> head(maMatrice)
+
+#Que signifie l'argument row.names ? :
+
+#---------------------------------------------------
+
+
+# Effacer un objet
+> rm(maMatrice0)
+
+# Propriété de la matrice :
+> colnames(maMatrice) \#nom des colonnes
+> maMatrice[, 1] # première colonne
+> maMatrice$NT_1 # éléments de la colonne ayant pour nom NT_1
+> head(maMatrice[, 1]) #premiers éléments de la 1ere colonne
+> ech1 <- maMatrice[, 1]
+> echNT1 <- maMatrice$NT_1 #premiers éléments de la colonne ayant pour nom NT_1
+
+# Calcul avec les matrices
+> maMatriceLog <- log(maMatrice) #Log tous les éléments de la matrice
+> head(maMatriceLog)
+#Fonction apply permet de travailler sur les colonnes ou sur les lignes.
+
+# Calcul uniquement sur les colonnes avec lafonction apply
+> geneMedian <- apply(maMatrice, 2, median)
+# Le deuxième argument ‘2' indique que le calcul se fait sur les colonnes. 
+# Le troisième argument ‘median' signifie que l'on applique (apply) le calcul de la médiane sur toutes colonnes.
+> geneMedian
+> length(geneMedian)
+
+#Question : De la même façon créer un profil médian (échantillon médian).
+# A compléter
+> profilMedian <- apply(
+
+#Sauvegarde dans un fichier
+> write.table(x = maMatriceLog, file = "logmat.txt", col.names = NA , row.names = TRUE, quote = FALSE, sep = "\t")
+
+

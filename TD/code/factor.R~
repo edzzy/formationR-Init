@@ -1,0 +1,28 @@
+#Fonctions utilisées : 
+# rep(), which(), factor()
+#Création des facteurs.
+> echFacteur <- factor(c(rep("NT", 6), rep("CYT6H", 8), rep("CYT48H", 6)))
+
+#1	EXTRAIRE LES ECHANTILLONS NT
+
+> names(echFacteur) \#nom des éléments de echFacteur
+> colnames(maMatrice) \# nom des colonnes de maMatrice
+> all(names(echFacteur) == colnames(maMatrice)) \# Répond TRUE si les noms de echFacteur et les noms des colonnes de maMatrice sont identiques. 
+
+#Construction de la commande par étape :
+
+> echFacteur == "NT"  \# teste si chaque élément est égal à « NT »
+> which(echFacteur == "NT") \# Indices qui répondent à la condition.
+
+#Commande finale :
+
+> NT <- maMatrice[, which(echFacteur == "NT")] \#Sélectionne les colonnes de la matrice correspondant aux indices ci-dessus.
+
+#De la même façon, récupérer les échantillons CYT6H puis CYT48H
+
+
+
+
+
+
+

@@ -1,0 +1,52 @@
+
+# Une addition 
+> 10 + 3
+# une division 
+> 10 / 3
+# les différents opérateur sont : 
+# multiplication * 
+# addition + 
+# division / 
+# soustraction -
+
+# Racine carrée :
+> 25^0.5
+
+#Série croissante de chiffres
+2:5
+
+#stockage d'une valeur dans une variable
+> nombreX <- 50.8
+#Accès à la valeur stockée dans la variable nombreX
+#Utiliser l'auto-complétion. Commencer par écrire nomb puis appuyer sur la  touche de tabulation.
+> nombreX
+
+#Calcul avec la variable 				
+> nombrex + 25
+
+# Pourquoi l'opération ne marche-t-elle pas ? Corriger et exécuter la ligne de commande.
+
+
+# Utilisation de plusieurs variables
+# stockage de la variable nombreY (le symbole <- est identique à =)
+> nombreY <- 7.4
+# Utiliser l'auto-complétion, si plusieurs solutions existent vous pouvez  
+# continuer de taper le nom de la variable pour que le choix soit plus 
+# restreint puis utiliser les flèches du clavier pour choisir la bonne 
+# variable. Une fois sélectionnée, appuyer soit sur entrée.
+> nombreX + nombreY
+# Stockage du résultat de l'opération dans la variable sommeXY
+# Conseil : utiliser l'historique en appuyant sur la 'flèche haut'
+# on peut retrouver des commandes déjà écrites.		
+> sommeXY <- nombreX + nombreY		
+# Opération avec variable et constante déjà existante.
+> sommeXY					
+> rayon <- nombreX
+> rayon
+> pi
+> A <- pi * rayon^2 #air d'un cercle en utilisant la variable pi déjà défini dans R
+# D'autres constantes existent : letters, LETTERS, month.name…
+
+
+
+
