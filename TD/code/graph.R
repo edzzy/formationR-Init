@@ -1,23 +1,34 @@
+#la fonction plot()
+x<-1:20
+plot(x, x^2)
+
+#Il existe plusieurs fonction de base pour les graphiques.
+# plot()
+# hist()
+# barplot()
+# barplot2()
+# boxplot()
 # Utilisation basique
-boxplot(maMatriceLog)
-# Avec quelques paramètres
-boxplot(maMatriceLog, col = "blue" , las = "2")
+boxplot(maMatrice)
+
+
+#Arguments communs à toutes les fonctions
+plot(x, x^2, xlim=c(0, 30), ylim=c(-100, 500), xlab="Variable x", ylab="Variable x au carré", main="Carré des valeurs de 1 à 20", cex.axis=1.5, cex.lab=1.5, cex.main=2, bty="l", pch=16)
+
 
 # Sauvegarde dans un fichier image
 # Dans l'onglet Plots : Export-'Save Plot As Image'
 # File name :  boxPlot
 # La même chose avec la commande : 
-dev.print(jpeg, file = "boxPlot.jpeg")
+jpeg("boxPlot.jpeg") 
+plot(x, x^2, xlim=c(0, 30), ylim=c(-100, 500), xlab="Variable x", ylab="Variable x au carré", main="Carré des valeurs de 1 à 20", cex.axis=1.5, cex.lab=1.5, cex.main=2, bty="l", pch=16)
 
-# La fonction plot permet de tracer une série de données contre une autre (x,y).
-# Par exemple on sélectionne la première colonne.
-ech1 = maMatrice[, 1]
+#fermer la fenêtre graphique en cours et enregistre le fichier pour l'ocasion
+dev.off()
 
-# En supposant que le profil median calculé précédemment se nomme profilMedian :
-# Graphique simple (l'argument log permet d'obtenir une échelle en log pour les axes mentionnés)
-plot(x = profilMedian, y = ech1, log = "xy")
+#Il existe 71 paramétres pour affiner les graphiques
+#liste des 71 paramétre de la fonction par()
+par()
 
-# Le même graphique avec des paramètres supplémentaires 
-plot(x = profilMedian, y = ech1, log = "xy" , pch = 19, col = "darkgreen", xlab = "Profil Median", ylab = "Echantillon 1", main = "Profil median VS Echantillon 1")
 
 

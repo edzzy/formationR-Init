@@ -5,33 +5,33 @@
 				action/.style = {circle,draw,fill=SandyBrown, text centered, minimum height=1.5em},
 				data/.style = {rectangle,draw,fill=RoyalBlue, text centered, rounded corners, text width=2cm, minimum height=4em}]
 
-	\node<1->[memory] (R) at  (2,7) {RAM (Temporaire)};
-	\node<1->[memory] (D3) at (2,2) {Disque dur };
+	\node<3->[memory] (R) at  (2,7) {RAM (Temporaire)};
+	\node<4->[memory] (D3) at (2,2) {Disque dur };
 
-	\node<2->[directory] (D1) at (6,7) {Workspace};
-	\node<2->[directory] (D7) at (6,2) {Work directory};
+	\node<5->[directory] (D1) at (6,7) {Workspace};
+	\node<6->[directory] (D7) at (6,2) {Work directory  référence};
 
-	\node<3->[data] (D2) at (10,7) {Objets};
-	\node<3->[data] (D4) at (10,2) {Fichiers, script \ldots};
+	\node<1->[data] (D2) at (10,7) {Objets};
+	\node<2->[data] (D4) at (10,2) {Fichiers, script \ldots};
 
-	\node<4->[action] (Read) at (8,4.5) {Read};
+	\node<7->[action] (Read) at (8,4.5) {Read};
 
-	\node<6->[action] (Write) at (12,4.5) {Write};
-
-
-	\draw<2->[-, thick] (R) -- (D1);
-	\draw<2->[-, thick] (D3) -- (D7);
+	\node<8->[action] (Write) at (12,4.5) {Write};
 
 
-	\draw<3->[-, thick] (D1) -- (D2);
-	\draw<3->[-, thick] (D7) -- (D4);
+	\draw<5->[-, thick] (R) -- (D1);
+	\draw<6->[-, thick] (D3) -- (D7);
 
 
-	\draw<5->[->, ultra thick] (Read) -- (D2);
-	\draw<5->[-,ultra thick] (D4)--(Read);
+	\draw<5->[-, thick] (D1) -- (D2);
+	\draw<6->[-, thick] (D7) -- (D4);
 
-	\draw<7->[->, ultra thick] (Write) -- (D4);
-	\draw<7->[-, ultra thick] (D2)--(Write);
+
+	\draw<7->[->, ultra thick] (Read) -- (D2);
+	\draw<7->[-,ultra thick] (D4)--(Read);
+
+	\draw<8->[->, ultra thick] (Write) -- (D4);
+	\draw<8->[-, ultra thick] (D2)--(Write);
 %	\draw[->, color = blue, ultra thick] (D3) -- (D5);
 \end{tikzpicture}
 

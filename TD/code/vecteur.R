@@ -1,7 +1,7 @@
 ####Création###
 
 #création d'un vecteur numérique 
-monVecteur1 <- c(20,45,78,12)	
+monVecteur1 <- c(20, 45, 78, 12)	
 
 # Une suite de nombre de 1 à 30
 maSuite <- seq(from = 1, to = 30)
@@ -17,6 +17,7 @@ maSuitePaire <- seq(from = 2, to = 20, by = 2)
 # La documentation de cette fonction s'affiche sur la panneau en bas à droite de RStudio
 
 
+rnorm()
 #Création d'un vecteur avec chaine de caractère.
 monVecteurA <- c("Mut_1", "Mut_2", "Mut_3")
 
@@ -25,28 +26,31 @@ monVecteurA <- c("Mut_1", "Mut_2", "Mut_3")
 
 ##Taille de l'objet##
 
-#Connaitre la longueur d'un vecteur au moyen de la fonction length
-# Indiquer la longueur de tous les vecteur créer
-# Pour connaitre toutes les variables créer il faut regarder l'onglet Workspace
+##Exercice 1 ####################
+# Indiquer la longueur de tous les vecteurs crées au moyen de la fonction legnth()
+#
+# Longueur des vecteurs :
+#
+#
+#
+#
+##
+#Remarque :
+# Pour connaitre touts les vecteurs créés il faut regarder l'onglet Workspace
 # dans le panneau en haut à droite de R studio.
 # Il est également possible d'uiliser la fonction ls() dans la console R.
 
-#Longueur des vecteurs :
-#
-#
-#
-#
+################################
 
-
-##Accéder au élément##
+##Accéder aux éléments##
 
 #Accès à l'élément d'indice 1
 monVecteur1[1]				
-#Accéder aux élément d'indice  3 , 4 puis 5.
+#Accéder aux éléments d'indice  3 , 4 puis 5.
 # Remarques.
 
 
-#Accès aux éléments d'indice de 1 à 3
+#Accès aux éléments d'indice 1 à 3
 monVecteur1[1:3]			
 
 ##Calcul##

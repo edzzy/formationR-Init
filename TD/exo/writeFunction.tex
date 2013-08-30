@@ -1,22 +1,23 @@
-\section{Écrire et utiliser une fonction}
-\paragraph{Objectif }: connaitre la syntaxe de la création d'une fonction. Savoir mettre en mémoire une fonction pour l'utiliser (‘sourcer').
-\paragraph{Fonction simple}
-Ouvrir le fichier fonctionTuto.R et le fichier script2Tuto.R :
-Répéter l'exercice précédent avec le fichier script2Tuto.R.
-On obtient un message d'erreur :  la fonction addition n'existe pas pour R. Pour lui faire connaitre il faut 'sourcer' le fichier qui contient la fonction.
+\section{Écrire et utiliser une fonction et l'utiliser dans un script}
+\subsubsection{Préparation}
+Il est plus facile d'écrire les fonctions dans des fichiers. Créer un nouveau fichier et le nommer fonction.R
+La synthaxe pour écrire une fonction est la suivante : 
+\lstinputlisting{code/synthaxefunction.R}
+\paragraph{Ennoncé} : Créer la fonction \emph{ingredientsPateAPizza} qui prend comme argument le nombre de pizza, par défaut 1. Elle doit retourner un vecteur indiquant les quantités pour les ingrédient.\par
+Les ingrédients pour une pizza
+\begin{itemize}
+	\item farine : 500
+	\item eau : 250
+	\item levure : 20
+\end{itemize}
+
+\paragraph{Aide} : Pour nommer les éléments d'un vecteur on utilise la fonction names() qui fonctione de la même façon que colnames pour les matrices et data.frame.
+
+\paragraph{Tester sa fonction} : La fonction est écrite dans le fichier fonction.R, mais elle est encore inconnue pour R. Pour la mettre en mémémoire il faut executer la fonction  \emph{source()}.
+\lstinputlisting{code/source.R}
+Si il n'y pas d'erreurs de syntaxe, la fonction sera reconnue par R ce que l'on remarque sur la fenêtre Workspace.
 \par
-Écrire une fonction similaire à addition du style : soustraction, multiplication…
-Utiliser la fonction écrite dans le fichier script2Tuto.R .
-Exécuter tout le script.
-\par
-Pour éviter d'oublier de ‘sourcer' le fichier, la méthode standard est d'écrire au début du fichier la commande  :
-\begin{verbatim}
-> source("fonctionTuto.R")
-\end{verbatim}
-
-Une autre option propre à RStudio est de cocher la case ‘Source on Save' pour le fichier fonctionTuto.R. Cela a pour effet de ‘sourcer' automatiquement le fichier fonctionTuto.R à chaque sauvegarde de ce fichier.
-
-
+On peut maintenant utiliser notre fonction de la même façon que n'importe quelles autres.
 
 
 

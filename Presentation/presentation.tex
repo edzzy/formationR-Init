@@ -8,13 +8,13 @@
 %\usetheme{Frankfurt}
 \usetheme{Boadilla}
 %-------------------TITRE------------------------%
-\title{Initiation R}
+\title{Formation à blanc \\Initiation R}
 %---------------Date à remplir ou commenter pour date du jour-------------%
 \institute{BiRD}
 \date{3 septembre 2013}
 \logo{\includegraphics[height=10mm]{image/logo.jpg}}
 %--------Rédacteur------------%
-\author{E.Hirchaud}
+\author{\textsc{E.Hirchaud\\ F.Simonet}}
 
 \usepackage{pslatex}
 \usepackage{tikz}
@@ -300,7 +300,7 @@ literate={é}{{\'e}}1
 		\textbf{Excel} &  \textbf{R} \pause\\
 		\hline 
 		
-		Cellule & Objet (simple) \\
+		Cellule & Elément simple \\
 		Plage de données & data.frame matrix, list, vector \pause\\
 		\hline
 		Valeur & Valeur (value) \\
@@ -445,7 +445,7 @@ literate={é}{{\'e}}1
 			\item On également un nom
 			\item Une description (leur rôle)
 			\item Des arguments, paramétres
-			\item Retourne un résultats
+			\item Retourne un ou des résultats
 			\item Créent, modifient et informent sur les données
 			\item Contiennent des arguments et des instructions
 		\end{itemize}
@@ -456,12 +456,11 @@ literate={é}{{\'e}}1
 	\setbeamercovered{dynamic}
 	\frametitle{Utilisation d'une fonction}
 	Une fonction c'est une recette de cuisine : La recette de la pâte à pizza
-	\begin{exampleblock}{Le quatre quarts : ingredients}
+	\begin{exampleblock}{La pate à pizza  : ingredients}
 		\begin{itemize}
 			\item 500g de farine
 			\item 250ml d'eau
 			\item 20g de levure de boulanger fraîche
-			\item 
 		\end{itemize}
 	\end{exampleblock}
 \end{frame}
@@ -538,7 +537,7 @@ literate={é}{{\'e}}1
 		\begin{itemize}
 			\item Un script permet l'exécution automatique d'une série d'instruction, de fonction\dots
 			\item Ces instructions sont écrites dans un fichier texte qui à pour extension .R
-			\item Un script comporte généralement en plus des lignes de commentaire, précédé par le symbole \#.
+			\item Un script comporte généralement des lignes de commentaire, précédées par le symbole \#.
 		\end{itemize}
 
 		\lstinputlisting[numbers=left, numberstyle=\ttfamily\color{blue}\footnotesize,stepnumber=1,numbersep=5pt,breaklines=true]{code/pizzaScript.R}
@@ -568,7 +567,7 @@ literate={é}{{\'e}}1
 	\include{syntheseR}
 \end{center}
 \end{frame}
-\begin{frame}
-	\grille
-\end{frame}
+%\begin{frame}
+%	\grille
+%\end{frame}
 \end{document}

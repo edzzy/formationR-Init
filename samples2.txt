@@ -1,4 +1,4 @@
-SampleID	Dye	Dye1pmol/ul	ng/ul	260/280	Qtitéenµg	AS	Volpourhyb0.825µg)µL
+SampleID	Dye	Concentration1l	Concentration2	rapp	Qt	AS	Vol
 E1-4	Cy5	3,52	203,79	2,25	6,1	17,3	4,05
 E1-5	Cy3	3,14	174,16	2,22	5,2	18	4,74
 E2-4	Cy3	1,64	101,18	2,25	3	16,2	8,15
