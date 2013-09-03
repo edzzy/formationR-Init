@@ -16,8 +16,9 @@ maSuitePaire <- seq(from = 2, to = 20, by = 2)
 
 # La documentation de cette fonction s'affiche sur la panneau en bas à droite de RStudio
 
+#La fonction rnorm permet de créer des vecteurs avec des nombres aléatoires
+monVecteurAlea <- rnorm(45)
 
-rnorm()
 #Création d'un vecteur avec chaine de caractère.
 monVecteurA <- c("Mut_1", "Mut_2", "Mut_3")
 
