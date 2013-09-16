@@ -12,7 +12,7 @@ mesEchantillons <- read.delim("samples.txt", row.names = 1, dec = ",", stringsAs
 
 mesEchantillons <- read.delim("samples2.txt", row.names = 1, dec = ",", stringsAsFactor = FALSE, header = TRUE)
 
-#Possible d'importer des données avec R studio mes touts les arguments ne sont pas disponibles
+#Possible d'importer des données avec R studio, mais tous les arguments ne sont pas disponibles.
 
 #Sauvegarde dans un fichier
 #La fonction essentiel write.table

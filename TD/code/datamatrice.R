@@ -1,4 +1,4 @@
-###Creation###
+###Création###
 
 ##Matrice avec des nombres aléatoires##
 maMatrice <- matrix(rnorm(100), ncol = 10)
@@ -10,11 +10,11 @@ maMatrice <- matrix(rnorm(100), ncol = 10)
 #voir les n premières lignes d'une matrice
 head(maMatrice)
 
-#Combien de lignes la fonction head() affiche t'elle par defaut
+#Combien de lignes la fonction head() affiche - t'elle par défaut
 #Comment afficher plus ou moins de ligne ? Utiliser la documentation de la fonction head pour trouver.
-#Comment voir la matrice à partir des dernieres lignes ?
+#Comment voir la matrice à partir des dernières lignes ?
 
-#Dimension de la matrice : nombre de lignes et nombre de colones 
+#Dimension de la matrice : nombre de lignes et nombre de colonnes 
 dim(maMatrice)
 #Quel type d'objet renvoie la fonction dim()
 
@@ -23,26 +23,26 @@ dim(maMatrice)
 
 #Avec la fonction dim() afficher uniquement le nombre de lignes
 
-###Acceder aux valeurs###
+###Accéder aux valeurs###
 
 #Une matrice est un ensemble de vecteur. 
-#Chaque colone est un vecteur ainsi que chaque ligne.
+#Chaque colonne est un vecteur ainsi que chaque ligne.
 
-#Recupperer des lignes, des colones des sous matrices.
-#Recuperer la 9eme colonne.
+#Récupérer des lignes, des colonnes des sous matrices.
+#Récupérer la 9ème colonne.
 col9 <- maMatrice[, 9]
 
-#De la même façon récuperer une ligne au choix.
+#De la même façon récupérer une ligne au choix.
 
-#Pour recuperer plusieurs lignes ou colonnes il faut indiquer les indices à recuperer sous forme de vecteurs.
+#Pour récupérer plusieurs lignes ou colonnes il faut indiquer les indices à récupérer sous forme de vecteurs.
 
-#Pour les colones 1,3 et 7
-#On indique les indices des colones à reccuperer
-colones <- c(1, 3, 7)
+#Pour les colonnes 1,3 et 7
+#On indique les indices des colonnes à récupérer
+colonnes <- c(1, 3, 7)
 #Puis 
-mesColones137 <- maMatrice[, colones]
+mesColonnes137 <- maMatrice[, colonnes]
 #Il est possible de tout faire en une seule ligne de commande
-mesColones137 <- maMatrice[, c(1, 3, 7)]
+mesColonnes137 <- maMatrice[, c(1, 3, 7)]
 
 
 ##Quelques fonctions à connaitre##
@@ -56,13 +56,13 @@ mesColones137 <- maMatrice[, c(1, 3, 7)]
 
 #Calculer la moyenne d'un vecteur de votre choix sans utiliser la fonction mean()
 
-###Nom des colones##
-#la fonction colnames() permet d'obtenir le nom des colones d'une matrice ou d'un data.frame
+###Nom des colonnes##
+#la fonction colnames() permet d'obtenir le nom des colonnes d'une matrice ou d'un data.frame
 colnames(maMatrice)
 
 #Que retourne cette fonction ?
 
-#Donner un nom au colones
+#Donner un nom aux colonnes
 colnames(maMatrice) <- LETTERS[1:ncol(maMatrice)]
 colnames(maMatrice)
 
@@ -73,5 +73,5 @@ class(maMatrice)
 #Transformer une matrice en data.frame
 monDataFrame <- as.data.frame(maMatrice)
 
-#Autre moyen d'acceder au colone avec un data.frame
-coloneC <- monDataFrame$C
+#Autre moyen d'accéder aux colonnes avec un data.frame
+colonneC <- monDataFrame$C

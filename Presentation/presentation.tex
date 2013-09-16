@@ -1,4 +1,4 @@
-\documentclass[table,svgnames,hyperref={pdfpagemode=FullScreen}]{beamer}
+\documentclass[handout, table,svgnames,hyperref={pdfpagemode=FullScreen}]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{color, colortbl}
@@ -8,10 +8,10 @@
 %\usetheme{Frankfurt}
 \usetheme{Boadilla}
 %-------------------TITRE------------------------%
-\title{Formation à blanc \\Initiation R}
+\title{Initiation R}
 %---------------Date à remplir ou commenter pour date du jour-------------%
 \institute{BiRD}
-\date{2 septembre 2013}
+\date{26 septembre 2013}
 \logo{\includegraphics[height=10mm]{image/logo.jpg}}
 %--------Rédacteur------------%
 \author{\textsc{E.Hirchaud\\ F.Simonet}}
@@ -46,7 +46,7 @@ escapeinside={},
 keywordstyle=\bfseries\color{DarkGreen},
 morekeywords={},
 literate={é}{{\'e}}1
-		{è}{{\`e}}1
+	{è}{{\`e}}1
 		{ê}{{\^e}}1
 		{à}{{\`a}}1
 		{ç}{{\c{c}}}1
@@ -118,7 +118,7 @@ literate={é}{{\'e}}1
 \subsection{Les applications}
 \begin{frame}
 	\setbeamercovered{dynamic}
-	\frametitle{Les applications : logiciels, programmes, }
+	\frametitle{Les applications : logiciels, programmes}
 	\begin{figure}[h]
 		\begin{center}
 		  \includegraphics[scale=0.45]{image/software.png}
@@ -132,7 +132,7 @@ literate={é}{{\'e}}1
 	\frametitle{Arborescence}
 	\begin{block}{Appellation}
 		\begin{itemize}
-			\item Fichiers : Données numeriques
+			\item Fichiers : Données numériques
 			\item Directory = Répertoire = Dossier : contient des fichiers.
 		\end{itemize}
 	\end{block}
@@ -163,9 +163,9 @@ literate={é}{{\'e}}1
 		\end{block}
 		\begin{block}{Symboles utilisés dans la navigation}
 			\begin{itemize}
-				\item La racine : Windows une lettre, linux et mac, symbole / 
-				\item Séparateur de répertoire : Windows : \textbackslash, linux et mac  /
-				\item Le Répertoire courrant : . (point)
+				\item La racine : Windows une lettre, Linux et mac, symbole / 
+				\item Séparateur de répertoire : Windows : \textbackslash, Linux et mac  /
+				\item Le Répertoire courant : . (point)
 				\item Le Répertoire parent : .. (deux points)
 			\end{itemize}
 		\end{block}
@@ -266,7 +266,7 @@ literate={é}{{\'e}}1
 				\item Créé par Ross Ihaka et Robert Gentleman (1996)
 				\item C'est un logiciel libre et gratuit
 				\item Disponible sur les systèmes d'exploitation les plus utilisés
-				\item Utilisé dans de nombreux domaines dont la bio analyse.
+				\item Utilisé dans de nombreux domaines dont la bioanalyse.
 			\end{itemize}
 		\end{block}
 	\end{center}
@@ -300,7 +300,7 @@ literate={é}{{\'e}}1
 		\textbf{Excel} &  \textbf{R} \pause\\
 		\hline 
 		
-		Cellule & Elément simple \\
+		Cellule & Élément simple \\
 		Plage de données & data.frame matrix, list, vector \pause\\
 		\hline
 		Valeur & Valeur (value) \\
@@ -332,7 +332,7 @@ literate={é}{{\'e}}1
 		\item Les valeurs ont un type : 
 			\begin{itemize}
 				\item numérique : 1,2, 3.14
-				\item chaîne de caratères : A,B genes
+				\item chaîne de caractères : A,B gènes
 				\item logique : TRUE/FALSE
 			\end{itemize}
 	\end{itemize}
@@ -346,9 +346,9 @@ literate={é}{{\'e}}1
 		\begin{itemize}[<+->]
 			\item vector $\Rightarrow$ vecteur (type homogène)
 			\item matrix $\Rightarrow$ matrice (type homogène)
-			\item data.frame $\Rightarrow$ tableau de données (type hétèrogène)
+			\item data.frame $\Rightarrow$ tableau de données (type hétérogène)
 			\item factor $\Rightarrow$ classe de paramètres qualitatifs (type homogène)
-			\item list $\Rightarrow$ liste( type hétèrogène)
+			\item list $\Rightarrow$ liste( type hétérogène)
 		\end{itemize}
 %	\end{center}
 \end{frame}
@@ -362,7 +362,7 @@ literate={é}{{\'e}}1
 \end{frame}
 \begin{frame}
 	\setbeamercovered{dynamic}
-	\frametitle{Acceder aux valeurs}
+	\frametitle{Accéder aux valeurs}
 	\begin{exampleblock}{Notion d'indices ou index}
 		\begin{itemize}
 			\item Les indices sont entourés de crochets 
@@ -444,7 +444,7 @@ literate={é}{{\'e}}1
 		\begin{itemize}
 			\item On également un nom
 			\item Une description (leur rôle)
-			\item Des arguments, paramétres
+			\item Des arguments, paramètres
 			\item Retourne un ou des résultats
 			\item Créent, modifient et informent sur les données
 		\end{itemize}
@@ -455,7 +455,7 @@ literate={é}{{\'e}}1
 	\setbeamercovered{dynamic}
 	\frametitle{Utilisation d'une fonction}
 	Une fonction c'est une recette de cuisine : La recette de la pâte à pizza
-	\begin{exampleblock}{La pate à pizza  : ingredients}
+	\begin{exampleblock}{La pâte à pizza  : ingrédients}
 		\begin{itemize}
 			\item 500 g de farine
 			\item 250 ml d'eau
@@ -465,11 +465,11 @@ literate={é}{{\'e}}1
 \end{frame}
 \begin{frame}
 	\setbeamercovered{dynamic}
-	\begin{exampleblock}{La pâte à pizza :  une suite d'actions ordonées}
+	\begin{exampleblock}{La pâte à pizza :  une suite d'actions ordonnées}
 		\begin{enumerate}
 			\item Verser la farine dans un saladier, y creuser un puits et ajouter l'eau
-			\item Danns un petit bol, faire fondre la levure dans un peu d'eau tiède.
-			\item ect\dots
+			\item Dans un petit bol, faire fondre la levure dans un peu d'eau tiède.
+			\item etc\dots
 		\end{enumerate}
 			
 	\end{exampleblock}
@@ -477,7 +477,7 @@ literate={é}{{\'e}}1
 \begin{frame}
 	\setbeamercovered{dynamic}
 	\begin{exampleblock}{Un résultat}
-		Une pâte à pizza prête à garnire.
+		Une pâte à pizza prête à garnir.
 	\end{exampleblock}
 \end{frame}
 \begin{frame}[fragile]
@@ -485,8 +485,8 @@ literate={é}{{\'e}}1
 	\begin{exampleblock}{En informatique : }
 		\begin{itemize}
 			\item La fonction à un nom  : preparerPateAPizza
-			\item Les ingredients sont des arguments : poidsFarine, volumeEau, poidsLevure
-			\item Les actions sont des suites d'insctruction (ligne de commandes)
+			\item Les ingrédients sont des arguments : poidsFarine, volumeEau, poidsLevure
+			\item Les actions sont des suites d'instructions (ligne de commandes)
 			\item Le retour de la fonction est un objet que l'on peut stoker dans une variable : maPateAPizza.
 		\end{itemize}
 		\begin{lstlisting}
@@ -500,12 +500,12 @@ literate={é}{{\'e}}1
 	\setbeamercovered{dynamic}
 	\frametitle{Ce qu'il faut retenir sur les fonctions}
 	\begin{itemize}
-	\item Les reconnaitres
+	\item Les reconnaitre
 	\item Identifier les arguments 
 	\item Modifier les arguments
 	\item Stocker le résultat dans une variable.
 	\item Lire la documentation de la fonction pour connaitre son utilisation
-	\item Il n'est pas essentiel de connaître son fonctionement dans le détail.  
+	\item Il n'est pas essentiel de connaître son fonctionnement dans le détail.  
 \end{itemize}
 \end{frame}
 \begin{frame}
@@ -525,7 +525,7 @@ literate={é}{{\'e}}1
 		\setbeamercovered{dynamic}
 		\frametitle{Package}
 		\begin{itemize}
-			\item Les packages contienent un ensemble de fonctions et parfois de jeux de données.
+			\item Les packages contiennent un ensemble de fonctions et parfois de jeux de données.
 			\item	library(ggplot2)
 			\item BioConductor : ensemble de package pour la bioanalyse
 		\end{itemize}
@@ -549,15 +549,15 @@ literate={é}{{\'e}}1
 			\begin{itemize}
 				\item : pizza  $\neq$ Pizza
 			\end{itemize}
-		\item Informatique anglo-saxone
+		\item Informatique anglo-saxonne
 			\begin{itemize}
 				\item Ne pas nommer les noms des objets avec des accents 
 				\item Le point sert de décimal, la virgule non !
 			\end{itemize}
 		\item Ne JAMAIS mettre d'espace dans un nom  
 		\item Ne JAMAIS commencer un nom par un chiffre 
-		\item Eviter d'utiliser des symboles (+ - / \dots)
-		\item Mots reservés
+		\item Éviter d'utiliser des symboles (+ - / \dots)
+		\item Mots réservés
 	\end{itemize}
 \end{frame}
 \begin{frame}

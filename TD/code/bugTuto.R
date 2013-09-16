@@ -1,10 +1,4 @@
-#Ligne de commande erroné.
-matriceBug <- read.delin("Samples.txt" ,  rown.names = 1  head = true)
+#Ligne de commande erronée.
+matriceBug <- read.delin("sample.txt" ,  rown.names = 1  head = true)
 
-#Erreur 1 : 
-#Erreur 2 : 
-#Erreur 3 : 
-#Erreur 4 :
-#Erreur 5 : 
 
-#Bonne ligne de commande :
