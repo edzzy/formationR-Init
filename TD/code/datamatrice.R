@@ -3,9 +3,6 @@
 ##Matrice avec des nombres aléatoires##
 maMatrice <- matrix(rnorm(100), ncol = 10)
 
-##Expliquer cette ligne de commande##
-#A quoi correspondent les différents mots composants cette ligne de commande.
-
 ##S'informer sur la matrice
 #voir les n premières lignes d'une matrice
 head(maMatrice)
@@ -43,7 +40,6 @@ colonnes <- c(1, 3, 7)
 mesColonnes137 <- maMatrice[, colonnes]
 #Il est possible de tout faire en une seule ligne de commande
 mesColonnes137 <- maMatrice[, c(1, 3, 7)]
-
 
 ##Quelques fonctions à connaitre##
 #Utiliser les fonctions suivante à la fois sur des vecteur comme col9 et sur la matrice entière

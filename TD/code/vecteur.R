@@ -3,6 +3,9 @@
 #création d'un vecteur numérique 
 monVecteur1 <- c(20, 45, 78, 12)	
 
+#A savoir
+c(20, 45, 78,
+
 # Une suite de nombre de 1 à 30
 maSuite <- seq(from = 1, to = 30)
 

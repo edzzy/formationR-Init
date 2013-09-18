@@ -1,6 +1,6 @@
-\section{Écrire et utiliser une fonction et l'utiliser dans un script}
+\section{Écrire et utiliser une fonction maison}
 \subsubsection{Préparation}
-Il est plus facile d'écrire les fonctions dans des fichiers. Créer un nouveau fichier et le nommer fonction.R
+Il est plus facile d'écrire des fonctions dans un ou plusieurs fichiers. Créer un nouveau fichier et le nommer mesFonctions.R
 La synthaxe pour écrire une fonction est la suivante : 
 \lstinputlisting{code/synthaxefunction.R}
 \paragraph{Ennoncé} : Créer la fonction \emph{ingredientsPateAPizza} qui prend comme argument le nombre de pizza, par défaut 1. Et retourne un vecteur avec les quantités pour X pizzas. : 
@@ -12,19 +12,34 @@ Les ingrédients pour une pizza
 	\item levure : 20
 \end{itemize}
 
-\paragraph{Aide} : Pour nommer les éléments d'un vecteur on utilise la fonction names() qui fonctione de la même façon que colnames pour les matrices et data.frame.
 
-\paragraph{Tester sa fonction} : La fonction est écrite dans le fichier fonction.R, mais elle est encore inconnue pour R. Pour la mettre en mémémoire il faut executer la fonction  \emph{source()}.
+\paragraph{Tester sa fonction} : La fonction est écrite dans le fichier fonction.R, mais elle est encore inconnue dans le \emph{workspace}. Pour la mettre en mémémoire il faut executer la fonction  \emph{source()}.
 \lstinputlisting{code/source.R}
 Si il n'y pas d'erreurs de syntaxe, la fonction sera reconnue par R ce que l'on remarque sur la fenêtre Workspace.
 \par
 On peut maintenant utiliser notre fonction de la même façon que n'importe quelles autres.
 
+\paragraph{Exercice} : Créer la fonction \emph{repIngred} qui prend comme arguments 
+\begin{itemize}
+\item \emph{vecIngred} Un vecteur de nombre dont chaque indice à le nom d'un ingrédients.
+\item \emph{imageName} Une chaine de caractaire qui correspond au nom du fichier image.
+\item \emph{recipiesName} Une chaine de carataire qui correspond au nom de la recette. 
+\end{itemize}
 
 
+\section{Programation les bases}
 
+\subsubsection{Les boucles}
 
+Le mot \emph{for} permet de répeter une instruction un certain de nombre de fois.
+\lstinputlisting{code/for.R}
+\paragraph{Exercice} : Dans un nouveau fichier de votre choix. Écrire une boucle \emph{for} exécutant 10 fois  la fonction \emph{ingredientsPateAPizza}
 
+\subsection{Les conditions}
+les instructions \emph{if} et \emph{else} permettent d'execter des parties de codes sous certaines conditions.
+\lstinputlisting{code/ifelse.R}
+\paragraph{Exercice} : Dans la fonction \emph{ingrédientsPateAPizza} ajouter une instruction \emph{if else} qui vérifie que l'arguments nbPizza soit bien positif et non nul. Auquel cas un message du style "Veillez saisir un nombre de pizza positif" devra s'afficher.
+ 
 
 
 
