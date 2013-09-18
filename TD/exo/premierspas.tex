@@ -2,22 +2,53 @@
 \subsection{R est une calculette}
 
 \lstinputlisting{code/calculsimple.R}
+
 \paragraph{EXERCICE} : 
- Calculer la différence entre votre dernière année à l'université
- Et votre année d'obtention du bac et divisé par la différence entre 2013 et votre
- année de naissance. Multiplier par 100 pour obtenir un pourcentage du temps passé 
- à l'université.
+
+ Calculer le temps passé dans votre dernière structure professionelle (université, labo, entreprise \dots)
+ puis diviser par la différence entre l'année en cours et votre année de naissance. Multiplier par 100 pour obtenir un pourcentage du temps passé 
+ dans cette structure.\par
+
 \lstinputlisting{code/calculsimple2.R}
+
 \paragraph{EXERCICE} : 
-Répéter l'exercice précédant mais en utilisant des variables. Plusieurs étapes peuvent être nécessaires.
+
+Répéter l'exercice précédant mais en utilisant des variables.
 \subsection{Créer des objets et les utiliser}
+
 \subsubsection{Vecteurs}
+
 \lstinputlisting{code/vecteur.R}
-\paragraph{EXERCICE} En utilisant la fonction \emph{seq()}, Créer un vecteur de nombres impaires de 7 à 77. 
+
+\paragraph{EXERCICE} En utilisant la fonction \emph{seq()}, créer un vecteur de nombres impaires allant de 7 à 77. 
+
 \lstinputlisting{code/vecteur2.R}
-\paragraph{EXERCICE} En utilisant les fonctions \emph{rep()} et \emph{paste(}) et \emph{seq()} créer un vecteur identique à \emph{monVecteurA}, mais allant de 1 à 20.
+
+\paragraph{EXERCICE} En utilisant les fonctions \emph{rep()} et \emph{paste(}) et \emph{seq()} créer un vecteur identique à \emph{monVecteurA}, mais allant de 1 à 20. Dans un premier temps utiliser des étapes intermédiares.
+
 \lstinputlisting{code/vecteur3.R}
-\paragraph{EXERCICE} Trouver une manière d'acceder au dernier élément d'un vecteur.
+
+\paragraph{EXERCICE} Trouver une manière d'accèder au dernier élément d'un vecteur.
+
 \lstinputlisting{code/vecteur4.R}
+
 \subsubsection{Matrices et data frame}
+
 \lstinputlisting{code/datamatrice.R}
+\paragraph{EXERCICE} : 
+\begin{itemize}
+\item Combien de lignes la fonction head() affiche - t'elle par défaut
+\item Comment afficher plus ou moins de ligne ? Utiliser la documentation de la fonction head pour trouver.
+\item Comment voir la matrice à partir des dernières lignes ?
+\end{itemize}
+\lstinputlisting{code/datamatrice2.R}
+\paragraph{EXERCICE} :
+\begin{itemize}
+\item Quel type d'objet renvoie la fonction dim()
+\item La fonction \emph{ncol()} permet de nous renseigner sur le nombre de colonnes.
+Trouver une fonction similaire pour trouver le nombre de lignes
+\item Avec la fonction \emph{dim()} afficher uniquement le nombre de lignes
+\end{itemize}
+\lstinputlisting{code/datamatrice3.R}
+\paragraph{EXERCICE} : Recupérer les colonnes 1, 7 et 3 de la matrice \emph{maMatrice}
+\lstinputlisting{code/datamatrice4.R}
