@@ -2,7 +2,7 @@
 x<-1:20
 plot(x, x^2)
 
-#Il existe plusieurs fonction de base pour les graphiques.
+#Il existe plusieurs fonctions de base pour les graphiques.
 # plot()
 # hist()
 # boxplot()

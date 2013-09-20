@@ -8,7 +8,7 @@ abs(monVecteur1)
 round(monVecteur1)
 round(monVecteur1, 2)
 
-# Opérations qui travailent sur tout un vecteur
+# Opérations qui travaillent sur tout un vecteur
 sum(monVecteur1)
 mean(monVecteur1)
 median(monVecteur1)

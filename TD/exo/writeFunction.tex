@@ -1,9 +1,9 @@
 \section{Écrire et utiliser une fonction maison}
-\subsubsection{Préparation}
-Il est plus facile d'écrire des fonctions dans un ou plusieurs fichiers. Créer un nouveau fichier et le nommer mesFonctions.R
-La synthaxe pour écrire une fonction est la suivante : 
+\paragraph{Préparation}
+Il est plus facile d'écrire des fonctions dans un ou plusieurs fichiers. Créer un nouveau fichier et le nommer \emph{mesFonctions.R}
+La syntaxe pour écrire une fonction est la suivante : 
 \lstinputlisting{code/synthaxefunction.R}
-\paragraph{Ennoncé} : Créer la fonction \emph{ingredientsPateAPizza} qui prend comme argument le nombre de pizza, par défaut 1. Et retourne un vecteur avec les quantités pour X pizzas. : 
+\paragraph{Ennoncé} : Créer la fonction \emph{ingredientsPateAPizza} qui prend comme argument le nombre de pizza (par défaut 1). Le retour est un vecteur avec les quantités pour X pizzas. : 
 \lstinputlisting{code/retour.R}
 Les ingrédients pour une pizza
 \begin{itemize}
@@ -12,33 +12,33 @@ Les ingrédients pour une pizza
 	\item levure : 20
 \end{itemize}
 
-
-\paragraph{Tester sa fonction} : La fonction est écrite dans le fichier fonction.R, mais elle est encore inconnue dans le \emph{workspace}. Pour la mettre en mémémoire il faut executer la fonction  \emph{source()}.
+\paragraph{Tester sa fonction} : La fonction est écrite dans le fichier fonction.R, mais elle est encore inconnue dans le \emph{workspace}. Pour la mettre en mémoire il faut executer la fonction  \emph{source()}.
 \lstinputlisting{code/source.R}
-Si il n'y pas d'erreurs de syntaxe, la fonction sera reconnue par R ce que l'on remarque sur la fenêtre Workspace.
+Si il n'y pas d'erreurs de syntaxe, la fonction sera reconnue par R. On le remarque sur la fenêtre Workspace.
 \par
-On peut maintenant utiliser notre fonction de la même façon que n'importe quelles autres.
+On peut maintenant utiliser notre fonction de la même façon que n'importe quelle autre.
 
-\paragraph{Exercice} : Créer la fonction \emph{repIngred} qui prend comme arguments 
+\paragraph{EXERCICE} : Créer la fonction \emph{repartIngr} qui prend comme arguments 
 \begin{itemize}
-\item \emph{vecIngred} Un vecteur de nombre dont chaque indice à le nom d'un ingrédients.
-\item \emph{imageName} Une chaine de caractaire qui correspond au nom du fichier image.
-\item \emph{recipiesName} Une chaine de carataire qui correspond au nom de la recette. 
+\item \emph{vecIngred} Un vecteur de nombre dont chaque indice à le nom d'un ingrédient.
+\item \emph{imageName} Une chaine de caractère qui correspond au nom du fichier image.
+\item \emph{recipiesName} Une chaine de caractère qui correspond au nom de la recette. 
 \end{itemize}
 
+Cette fonction doit créer un graphique avec la fonction \emph{pie} et l'enregistrer sous le même nom que \emph{imageName}
 
-\section{Programation les bases}
+\section{Programmation : les bases}
 
-\subsubsection{Les boucles}
+\subsection{Les boucles}
 
-Le mot \emph{for} permet de répeter une instruction un certain de nombre de fois.
+Le mot \emph{for} permet de répéter une instruction un certain nombre de fois.
 \lstinputlisting{code/for.R}
-\paragraph{Exercice} : Dans un nouveau fichier de votre choix. Écrire une boucle \emph{for} exécutant 10 fois  la fonction \emph{ingredientsPateAPizza}
+\paragraph{EXERCICE} : Dans un nouveau fichier de votre choix, écrire une boucle \emph{for} exécutant 10 fois  la fonction \emph{ingredientsPateAPizza}
 
 \subsection{Les conditions}
-les instructions \emph{if} et \emph{else} permettent d'execter des parties de codes sous certaines conditions.
+Les instructions \emph{if} et \emph{else} permettent d'executer des parties de codes sous certaines conditions.
 \lstinputlisting{code/ifelse.R}
-\paragraph{Exercice} : Dans la fonction \emph{ingrédientsPateAPizza} ajouter une instruction \emph{if else} qui vérifie que l'arguments nbPizza soit bien positif et non nul. Auquel cas un message du style "Veillez saisir un nombre de pizza positif" devra s'afficher.
+\paragraph{Exercice} : Dans la fonction \emph{ingrédientsPateAPizza} ajouter une instruction \emph{if else} qui vérifie que l'argument nbPizza est bien positif et non nul. Auquel cas, un message du style "Veillez saisir un nombre de pizza positif" devra s'afficher.
  
 
 

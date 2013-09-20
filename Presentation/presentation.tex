@@ -8,13 +8,13 @@
 %\usetheme{Frankfurt}
 \usetheme{Boadilla}
 %-------------------TITRE------------------------%
-\title{Initiation R}
+\title{\textsc{Formation \\ Langage de programmation - R}}
 %---------------Date à remplir ou commenter pour date du jour-------------%
-\institute{BiRD}
+%\institute{BiRD - Inserm}
 \date{26 septembre 2013}
 \logo{\includegraphics[height=10mm]{image/logo.jpg}}
 %--------Rédacteur------------%
-\author{\textsc{E.Hirchaud\\ F.Simonet}}
+\author{\textsc{Édouard Hirchaud \\ Floriane Simonet}} 
 
 \usepackage{pslatex}
 \usepackage{tikz}
@@ -95,7 +95,8 @@ literate={é}{{\'e}}1
 \begin{document}
 
 \begin{frame}
-	\titlepage
+	\maketitle
+%	\titlepage
 \end{frame}
 	
 
@@ -164,7 +165,7 @@ literate={é}{{\'e}}1
 		\begin{block}{Symboles utilisés dans la navigation}
 			\begin{itemize}
 				\item La racine : Windows une lettre, Linux et mac, symbole / 
-				\item Séparateur de répertoire : Windows : \textbackslash, Linux et mac  /
+				\item Séparateur de répertoire : Windows  \textbackslash, Linux et mac  /
 				\item Le Répertoire courant : . (point)
 				\item Le Répertoire parent : .. (deux points)
 			\end{itemize}
@@ -336,7 +337,7 @@ literate={é}{{\'e}}1
 				\item logique : TRUE/FALSE
 			\end{itemize}
 	\end{itemize}
-	Les objets sont temporaires, ils sont stocker dans la mémoire vive de l'ordinateur. Il faudra donc les sauvegarder.
+	Les objets sont temporaires, ils sont stockés dans la mémoire vive de l'ordinateur. Il faudra donc les sauvegarder.
 \end{frame}
 
 \begin{frame}
@@ -487,7 +488,7 @@ literate={é}{{\'e}}1
 			\item La fonction à un nom  : preparerPateAPizza
 			\item Les ingrédients sont des arguments : poidsFarine, volumeEau, poidsLevure
 			\item Les actions sont des suites d'instructions (ligne de commandes)
-			\item Le retour de la fonction est un objet que l'on peut stoker dans une variable : maPateAPizza.
+			\item Le retour de la fonction est un objet que l'on peut stocker dans une variable : maPateAPizza.
 		\end{itemize}
 		\begin{lstlisting}
 		 maPateAPizza <- preparerPateAPizza(poidsFarine = 250, volumeEau = 250, 
