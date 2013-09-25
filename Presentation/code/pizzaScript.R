@@ -2,10 +2,10 @@
 maPateAPizza <- preparerPateAPizza (poidsFarine = 250, volumeEau = 250, poidsLevure = 20)
 
 #Stockage des ingredients
-mesIngredient <- c("Tomates", "Mozzarela", "Olives noires")
+mesIngredients <- c("Tomates", "Mozzarela", "Olives noires")
 
 #Garnir la pizza
-maPizzaGarni <- garnirPizza(pate = maPateAPizza, ingredients = mesIngredients)
+maPizzaGarnie <- garnirPizza(pate = maPateAPizza, ingredients = mesIngredients)
 
 #Cuir la pizza
-pizzaCuite <- cuirePizza(pizzaGarni = maPizzaGarni)
+pizzaCuite <- cuirePizza(pizzaGarnie = maPizzaGarnie)
